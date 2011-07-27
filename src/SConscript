@@ -52,7 +52,7 @@ integrators_src = [ 'integrators/ambientocclusion.cpp',      'integrators/diffus
 lights_src = [ 'lights/diffuse.cpp',           'lights/distant.cpp',
                'lights/goniometric.cpp',       'lights/infinite.cpp',
                'lights/point.cpp',             'lights/projection.cpp', 
-               'lights/spot.cpp' ]
+               'lights/spot.cpp',              'lights/sky.cpp']
 materials_src = [ 'materials/glass.cpp',         'materials/kdsubsurface.cpp',
                   'materials/matte.cpp',         'materials/measured.cpp',
                   'materials/metal.cpp',         'materials/mirror.cpp',
