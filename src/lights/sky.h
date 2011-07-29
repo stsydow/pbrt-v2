@@ -40,7 +40,8 @@
 class SkyAreaLight : public Light {
 public:
     // SkyAreaLight Public Methods
-    SkyAreaLight(const Transform &light2world, int ns);
+    SkyAreaLight(const Transform &light2world, int ns, 
+        float turb, float lat, float hour, int day);
     ~SkyAreaLight();
     Spectrum Power(const Scene *) const;
     bool IsDeltaLight() const { return false; }
@@ -62,12 +63,13 @@ private:
 	
 	float samplePower(float phi, float theta) const;
 	Spectrum sample(float phi, float theta) const;
-	int dayOfYear;
-	float hourOfDay;
 
-	float phiSun, thetaSun;
 	float turbidity;
 	float localLatitude;
+	float hourOfDay;
+	int dayOfYear;
+
+	float phiSun, thetaSun;
 	float declination; 
 	float A[3],B[3],C[3],D[3],E[3];
 	float xyY_zenith[3];

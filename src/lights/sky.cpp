@@ -30,16 +30,16 @@
 #include "paramset.h"
 #include "imageio.h"
 
-float A_T[3] = { 0.1787, -0.0193, -0.0167};
-float A_0[3] = {-1.4630, -0.2592, -0.2608};
-float B_T[3] = {-0.3554, -0.0665, -0.0950};
-float B_0[3] = { 0.4275,  0.0008,  0.0092};
-float C_T[3] = {-0.0227, -0.0004, -0.0079};
-float C_0[3] = { 5.3251,  0.2125,  0.2102};
-float D_T[3] = { 0.1206, -0.0641, -0.0441};
-float D_0[3] = {-2.5771, -0.8989, -1.6537};
-float E_T[3] = {-0.0670, -0.0033, -0.0109};
-float E_0[3] = { 0.3703,  0.0452,  0.0529};
+const float A_T[3] = { 0.1787, -0.0193, -0.0167};
+const float A_0[3] = {-1.4630, -0.2592, -0.2608};
+const float B_T[3] = {-0.3554, -0.0665, -0.0950};
+const float B_0[3] = { 0.4275,  0.0008,  0.0092};
+const float C_T[3] = {-0.0227, -0.0004, -0.0079};
+const float C_0[3] = { 5.3251,  0.2125,  0.2102};
+const float D_T[3] = { 0.1206, -0.0641, -0.0441};
+const float D_0[3] = {-2.5771, -0.8989, -1.6537};
+const float E_T[3] = {-0.0670, -0.0033, -0.0109};
+const float E_0[3] = { 0.3703,  0.0452,  0.0529};
 
 // SkyAreaLight Utility Classes
 struct SkyAreaCube {
@@ -65,25 +65,22 @@ SkyAreaLight::~SkyAreaLight() {
     delete distribution;
 }
 
-SkyAreaLight::SkyAreaLight(const Transform &light2world, int ns)
-    : Light(light2world, ns) {
-    int width = 1024, height = 1024;
+SkyAreaLight::SkyAreaLight(const Transform &light2world, int ns, 
+    float turb, float lat, float hour, int day)
+    : Light(light2world, ns), 
+    turbidity(turb), localLatitude(lat), hourOfDay(hour), dayOfYear(day) 
+{
+    const int width = 1024, height = 1024;
 
-	this->turbidity = 6; // clear sky;
-	this->localLatitude = (52.0)*M_PI/180; //berlin
-	this->hourOfDay = 4.00;
-	this->dayOfYear = 160;
-	updateEnv();
+    updateEnv();
 
     // Initialize sampling PDFs for sky area light
     // Compute scalar-valued image _img_ from environment map
     float filter = 1.f / max(width, height);
     float *img = new float[width*height];
     for (int v = 0; v < height; ++v) {
-        //float vp = (float)v / (float)height;
         float sinTheta = sinf(M_PI * float(v+.5f)/float(height));
         for (int u = 0; u < width; ++u) {
-            //float up = (float)u / (float)width;
             img[u+v*width] = filter * samplePower(
 					2*M_PI * float(u+.5f)/float(width), 
 					M_PI * float(v+.5f)/float(height));
@@ -113,12 +110,13 @@ void SkyAreaLight::updateEnv(){
 	declination = 0.4093*sin((2*M_PI*(dayOfYear - 81))/368);
 	float cos_l = cos(localLatitude);
 	float cos_d = cos(declination);
-	float sin_l_d = sin(localLatitude)*sin(declination);
+	float sin_l = sin(localLatitude);
+	float sin_d = sin(declination);
 	float time_angle = M_PI*hourOfDay/12;
 	float cos_time_angle = cos(time_angle);
-	thetaSun = M_PI/2 - asin(sin_l_d - cos_l*cos_d * cos_time_angle);
+	thetaSun = M_PI/2 - asin(sin_l * sin_d - cos_l*cos_d * cos_time_angle);
 	phiSun = atan((-cos_d*sin(time_angle))/
-			(cos_l*sin(declination) - sin(localLatitude)*cos_d * cos_time_angle));
+			(cos_l*sin_d - sin_l*cos_d * cos_time_angle));
 
 	// compute coeff according to turbidity
 	for(int i = 0; i < 3; i++){
@@ -158,11 +156,10 @@ float SkyAreaLight::samplePower(float phi, float theta) const
 {
 	double cos_gamma = cos(theta)*cos(thetaSun) + sin(theta)*sin(thetaSun)*cos(phi-phiSun);
 	double gamma = acos(cos_gamma);
+	
 	const double gamma_sun = 0.5*1.392e6/1.496e8;
 	if(gamma < gamma_sun){//direct sunlight
-		//gamma *= gamma/gamma_sun; //its a hack
-		gamma = 0; //its a hack
-		cos_gamma = cos(gamma);
+		gamma = 0; cos_gamma = 1;
 	}
 
 	float result = xyY_norm[0] * (1 + A[0] * exp(B[0]/fabs(cos(theta))))*(1 + C[0]*exp(D[0]*gamma) + E[0]*cos_gamma*cos_gamma);
@@ -177,12 +174,12 @@ Spectrum SkyAreaLight::sample(float phi, float theta) const
 	double cos_gamma = cos(theta)*cos(thetaSun) + sin(theta)*sin(thetaSun)*cos(phi-phiSun);
 	double gamma = acos(cos_gamma);
 	float abs_cos_theta = fabs(cos(theta));
+	
 	const double gamma_sun = 0.5*1.392e6/1.496e8;
 	if(gamma < gamma_sun){//direct sunlight
-		//gamma *= gamma/gamma_sun; //its a hack
-		gamma = 0; //its a hack
-		cos_gamma = cos(gamma);
+		gamma = 0; cos_gamma = 1;
 	}
+
 	for(int i = 0; i < 3; i++){
 		xyY[i] = xyY_norm[i] *(1 + A[i] * exp(B[i]/abs_cos_theta))*(1 + C[i]*exp(D[i]*gamma) + E[i]*cos_gamma*cos_gamma);
 	}
@@ -190,10 +187,7 @@ Spectrum SkyAreaLight::sample(float phi, float theta) const
 	XYZ[0] = xyY[0]*xyY[1]/xyY[2];
 	XYZ[1] = xyY[0];
 	XYZ[2] = xyY[0]*(1-xyY[1]-xyY[2])/xyY[2];
-	//assert(XYZ[2] >= 0);
-	assert(xyY[0] < 1e6);
 	return RGBSpectrum::FromXYZ(XYZ,SPECTRUM_ILLUMINANT);
-	//return Spectrum(result,SPECTRUM_ILLUMINANT);
 }
 
 Spectrum SkyAreaLight::Power(const Scene *scene) const {
@@ -230,64 +224,21 @@ void SkyAreaLight::SHProject(const Point &p, float pEpsilon,
     }
     for (int i = 0; i < SHTerms(lmax); ++i)
         coeffs[i] = 0.f;
-    /* TODO
-	int ntheta = radianceMap->Height(), nphi = radianceMap->Width();
-    if (min(ntheta, nphi) > 50) {
-        // Project _SkyAreaLight_ to SH from lat-long representation
-
-        // Precompute $\theta$ and $\phi$ values for lat-long map projection
-        float *buf = new float[2*ntheta + 2*nphi];
-        float *bufp = buf;
-        float *sintheta = bufp;  bufp += ntheta;
-        float *costheta = bufp;  bufp += ntheta;
-        float *sinphi = bufp;    bufp += nphi;
-        float *cosphi = bufp;
-        for (int theta = 0; theta < ntheta; ++theta) {
-            sintheta[theta] = sinf((theta + .5f)/ntheta * M_PI);
-            costheta[theta] = cosf((theta + .5f)/ntheta * M_PI);
-        }
-        for (int phi = 0; phi < nphi; ++phi) {
-            sinphi[phi] = sinf((phi + .5f)/nphi * 2.f * M_PI);
-            cosphi[phi] = cosf((phi + .5f)/nphi * 2.f * M_PI);
-        }
-        float *Ylm = ALLOCA(float, SHTerms(lmax));
-        for (int theta = 0; theta < ntheta; ++theta) {
-            for (int phi = 0; phi < nphi; ++phi) {
-                // Add _SkyAreaLight_ texel's contribution to SH coefficients
-                Vector w = Vector(sintheta[theta] * cosphi[phi],
-                                  sintheta[theta] * sinphi[phi],
-                                  costheta[theta]);
-                w = Normalize(LightToWorld(w));
-                Spectrum Le = Spectrum(radianceMap->Texel(0, phi, theta),
-                                       SPECTRUM_ILLUMINANT);
-                SHEvaluate(w, lmax, Ylm);
-                for (int i = 0; i < SHTerms(lmax); ++i)
-                    coeffs[i] += Le * Ylm[i] * sintheta[theta] *
-                        (M_PI / ntheta) * (2.f * M_PI / nphi);
-            }
-        }
-
-        // Free memory used for lat-long theta and phi values
-        delete[] buf;
-    }
-    else {
-	*/
-        // Project _SkyAreaLight_ to SH from cube map sampling
-        SHProjectCube(SkyAreaCube(this, scene, time, computeLightVis,
-                                       pEpsilon),
+    // Project _SkyAreaLight_ to SH from cube map sampling
+    SHProjectCube(SkyAreaCube(this, scene, time, computeLightVis, pEpsilon),
                       p, 200, lmax, coeffs);
-    //TODO}
 }
 
 
 SkyAreaLight *CreateSkyLight(const Transform &light2world,
         const ParamSet &paramSet) {
-    // TODO
-	//Spectrum L = paramSet.FindOneSpectrum("L", Spectrum(1.0));
-    //Spectrum sc = paramSet.FindOneSpectrum("scale", Spectrum(1.0));
+    float turbidity = paramSet.FindOneFloat("turbidity", 6.0f);
+    float latitude = paramSet.FindOneFloat("latitude", 45.0f) *M_PI/180;
+    float hour = paramSet.FindOneFloat("hour", 12.0f);
+    float day = paramSet.FindOneInt("day_of_year", 160.0f);
     int nSamples = paramSet.FindOneInt("nsamples", 1);
     if (PbrtOptions.quickRender) nSamples = max(1, nSamples / 4);
-    return new SkyAreaLight(light2world, nSamples);
+    return new SkyAreaLight(light2world, nSamples, turbidity, latitude, hour, day);
 }
 
 
@@ -300,8 +251,6 @@ Spectrum SkyAreaLight::Sample_L(const Point &p, float pEpsilon,
     distribution->SampleContinuous(ls.uPos[0], ls.uPos[1], uv, &mapPdf);
     if (mapPdf == 0.f) return 0.f;
 	
-	//float power = samplePower(2*M_PI * ls.uPos[0], M_PI *ls.uPos[1]);
-
     // Convert sky light sample point to direction
     float theta = uv[1] * M_PI, phi = uv[0] * 2.f * M_PI;
     float costheta = cosf(theta), sintheta = sinf(theta);
