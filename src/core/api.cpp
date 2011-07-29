@@ -1,6 +1,7 @@
 
 /*
     pbrt source code Copyright(c) 1998-2010 Matt Pharr and Greg Humphreys.
+    2011 Stefan Sydow (added sky model after Preetham1999)
 
     This file is part of pbrt.
 
