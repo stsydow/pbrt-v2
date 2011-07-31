@@ -116,8 +116,11 @@ void SkyAreaLight::updateEnv(){
 	float time_angle = M_PI*hourOfDay/12;
 	float cos_time_angle = cos(time_angle);
 	thetaSun = M_PI/2 - asin(sin_l * sin_d - cos_l*cos_d * cos_time_angle);
-	phiSun = atan((-cos_d*sin(time_angle))/
-			(cos_l*sin_d - sin_l*cos_d * cos_time_angle));
+	//phiSun = atan((-cos_d*sin(time_angle))/
+	//		(cos_l*sin_d - sin_l*cos_d * cos_time_angle));
+	float azimuth_x = cos_l*sin_d - sin_l*cos_d*cos_time_angle;
+	float azimuth_y = cos_d*sin(time_angle);
+	phiSun = atan2(azimuth_x, azimuth_y);
 
 	// compute coeff according to turbidity
 	for(int i = 0; i < 3; i++){
@@ -236,7 +239,7 @@ SkyAreaLight *CreateSkyLight(const Transform &light2world,
     float turbidity = paramSet.FindOneFloat("turbidity", 6.0f);
     float latitude = paramSet.FindOneFloat("latitude", 45.0f) *M_PI/180;
     float hour = paramSet.FindOneFloat("hour", 12.0f);
-    float day = paramSet.FindOneInt("day_of_year", 160.0f);
+    float day = paramSet.FindOneInt("day_of_year", 160);
     int nSamples = paramSet.FindOneInt("nsamples", 1);
     if (PbrtOptions.quickRender) nSamples = max(1, nSamples / 4);
     return new SkyAreaLight(light2world, nSamples, turbidity, latitude, hour, day);
