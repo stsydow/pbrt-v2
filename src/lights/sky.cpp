@@ -113,7 +113,8 @@ void SkyAreaLight::updateEnv(){
 	float cos_d = cos(declination);
 	float sin_l = sin(localLatitude);
 	float sin_d = sin(declination);
-	float time_angle = M_PI*hourOfDay/12;
+	float _time = hourOfDay + 0.17*sin(4*M_PI*(dayOfYear - 80)/373) - 0.129*sin(2*M_PI*(dayOfYear - 8)/355);// + 12*(timeMeridian - localLatitude)/M_PI; 
+	float time_angle = M_PI* _time/12;
 	float cos_time_angle = cos(time_angle);
 	thetaSun = M_PI/2 - asin(sin_l * sin_d - cos_l*cos_d * cos_time_angle);
 	//phiSun = atan((-cos_d*sin(time_angle))/
