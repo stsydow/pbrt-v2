@@ -1,0 +1,2323 @@
+
+# Exported from structuresynth by the pbrt exporter
+# http://pbrt.org
+
+#set minsize 7
+#
+#{ x 0 y 0 z 20 s 200 200 10 color #FFF } sky
+#
+#rule sky maxdepth 7 > cloud_u { tree }
+#
+#rule tree w 2 {
+# { s 0.5 0.5 1 x -0.6} tree_rot
+# { s 0.7 0.7 1 x 0.5 } tree_rot
+#}
+#
+#rule tree  w 10{
+# { s 0.6 0.6  1 x -1} tree_rot
+# { s 0.7 0.7  1 x 1} tree_rot
+#}
+#
+#rule tree_rot  w  5 { { rz -80 } sky }
+#rule tree_rot  w  5 { { rz 50 } sky }
+#
+#
+#rule cloud_u maxdepth 1 > box{ cloud }
+#
+#rule cloud w 0.2{ 
+#	{s 0.9 }cloud_u
+#	{s -0.9 z -0.3 }cloud_u
+#	{y 1} cloud_u
+#}
+#rule cloud  w 1{ 
+#	{x 1 s 0.9}cloud_u
+#	{y -1} cloud_u
+#}
+#
+#rule cloud  w 1{ { rz  30 } cloud }
+#rule cloud  w 1{ { ry  10} cloud }
+#rule cloud  w 1{ { rz -30} cloud }
+#rule cloud  w 1{ { ry -10} cloud }
+#rule cloud  w 0.5{ { s 0.6 } cloud }
+
+TransformBegin 
+    Transform [ -4.13525 -0.729157 0 0 0.729156 -4.13525 0 0 0 0 9 0 -194.129 -4.69624 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -4.59473 -0.810175 0 0 0.810181 -4.59472 0 0 0 0 10 0 -190.155 0.978897 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -4.82445 -0.850684 0 0 0.850677 -4.82446 0 0 0 0 9 0 -178.019 -6.57393 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -5.3605 -0.945204 0 0 0.945206 -5.36051 0 0 0 0 10 0 -173.383 0.04707 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 3.33395 5.77459 0 0 -5.77458 3.33396 0 0 0 0 9 0 -178.966 -52.9528 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 3.70439 6.41621 0 0 -6.41621 3.7044 0 0 0 0 10 0 -176.119 -63.5794 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -4.02038 -0.708904 0 0 0.7089 -4.02038 0 0 0 0 9 0 -117.672 -50.0137 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -4.46709 -0.78767 0 0 0.787666 -4.46709 0 0 0 0 10 0 -113.809 -44.4962 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 2.28056 -6.26579 0 0 6.26579 2.28056 0 0 0 0 9 0 -154.249 -64.894 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 2.53397 -6.96199 0 0 6.96199 2.53396 0 0 0 0 10 0 -164.219 -60.2446 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 5.25387 -4.40851 0 0 4.40852 5.25387 0 0 0 0 9 0 -101.09 -23.2302 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 5.83763 -4.89835 0 0 4.89835 5.83763 0 0 0 0 10 0 -112.363 -24.2164 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -7.87994 -1.38945 0 0 1.38945 -7.87994 0 0 0 0 9 0 -68.8482 34.1705 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -8.75549 -1.54383 0 0 1.54383 -8.75549 0 0 0 0 10 0 -61.2759 44.9848 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 7.15109 -6.00048 0 0 6.00048 7.15109 0 0 0 0 9 0 -14.8791 -12.7994 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 7.94566 -6.6672 0 0 6.6672 7.94566 0 0 0 0 10 0 -30.2226 -14.1418 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 5.25387 -4.40851 0 0 4.40852 5.25386 0 0 0 0 9 0 -130.954 133.525 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 5.83763 -4.89835 0 0 4.89835 5.83763 0 0 0 0 10 0 -142.227 132.539 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -9.19327 -1.62103 0 0 1.62103 -9.19327 0 0 0 0 9 0 -111.289 119.681 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -10.2147 -1.80113 0 0 1.80114 -10.2147 0 0 0 0 10 0 -102.455 132.297 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -7.87994 -1.38945 0 0 1.38945 -7.87994 0 0 0 0 9 0 -75.114 97.7451 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 7.87994 1.38945 0 0 -1.38945 7.87994 0 0 0 0 -9 0 -81.6044 88.4757 27.7 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -8.75549 -1.54383 0 0 1.54383 -8.75549 0 0 0 0 10 0 -73.2095 89.5046 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -3.8147e-06 7.77924 0 0 -7.77924 0 0 0 0 0 9 0 -44.862 151.336 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 3.8147e-06 -7.77924 0 0 7.77924 0 0 0 0 0 -9 0 -52.6413 159.115 27.7 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -3.8147e-06 8.6436 0 0 -8.6436 0 0 0 0 0 10 0 -53.0734 150.904 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -7.87994 -1.38945 0 0 1.38945 -7.87994 0 0 0 0 9 0 31.4829 115.98 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 7.87994 1.38945 0 0 -1.38945 7.87994 0 0 0 0 -9 0 24.9924 106.71 27.7 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -8.75549 -1.54383 0 0 1.54383 -8.75549 0 0 0 0 10 0 33.3873 107.739 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -7.87994 -1.38945 0 0 1.38945 -7.87994 0 0 0 0 9 0 73.5158 89.1575 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -8.75549 -1.54383 0 0 1.54383 -8.75549 0 0 0 0 10 0 81.0881 99.9718 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -7.87994 -1.38945 0 0 1.38945 -7.87994 0 0 0 0 9 0 90.1602 101.45 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -8.75549 -1.54383 0 0 1.54383 -8.75549 0 0 0 0 10 0 97.7325 112.264 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 0 9.33509 0 0 -9.33509 0 0 0 0 0 9 0 135.384 110.398 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 0 10.3723 0 0 -10.3723 0 0 0 0 0 10 0 146.275 99.5069 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 8.34294 -7.00056 0 0 7.00056 8.34294 0 0 0 0 9 0 133.218 133.973 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -8.34294 7.00055 0 0 -7.00056 -8.34294 0 0 0 0 -9 0 148.561 135.316 27.7 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 9.26994 -7.7784 0 0 7.7784 9.26994 0 0 0 0 10 0 140.144 143.169 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -9.19327 -1.62103 0 0 1.62103 -9.19327 0 0 0 0 9 0 180.229 61.3956 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -10.2147 -1.80114 0 0 1.80113 -10.2147 0 0 0 0 10 0 189.063 74.0123 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 5.44547 9.43183 0 0 -9.43182 5.44546 0 0 0 0 9 0 148.294 -2.47526 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -5.44547 -9.43183 0 0 9.43182 -5.44546 0 0 0 0 -9 0 144.308 12.402 27.7 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 6.05052 10.4798 0 0 -10.4798 6.05052 0 0 0 0 10 0 138.036 2.74873 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -7.87994 -1.38945 0 0 1.38945 -7.87994 0 0 0 0 9 0 48.1849 -102.163 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -8.75549 -1.54383 0 0 1.54383 -8.75549 0 0 0 0 10 0 55.7571 -91.349 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 5.95924 -5.0004 0 0 5.0004 5.95925 0 0 0 0 9 0 74.7363 -57.3544 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 6.62139 -5.556 0 0 5.556 6.62138 0 0 0 0 10 0 61.9501 -58.4731 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 8.34294 -7.00056 0 0 7.00056 8.34294 0 0 0 0 9 0 83.8007 -52.5458 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 9.26994 -7.7784 0 0 7.7784 9.26994 0 0 0 0 10 0 65.9 -54.1119 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 0 5.5566 0 0 -5.5566 -3.8147e-06 0 0 0 0 9 0 126.879 -38.6812 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 0 6.174 0 0 -6.174 -3.8147e-06 0 0 0 0 10 0 133.362 -45.1639 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 0 7.77924 0 0 -7.77924 -3.8147e-06 0 0 0 0 9 0 150.554 -45.1435 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 0 8.6436 0 0 -8.6436 -3.8147e-06 0 0 0 0 10 0 159.63 -54.2193 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -10.7255 -1.8912 0 0 1.89119 -10.7255 0 0 0 0 9 0 158.219 -61.7916 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -11.9172 -2.10133 0 0 2.10133 -11.9172 0 0 0 0 10 0 168.525 -47.0721 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -10.4276 -1.83867 0 0 1.83867 -10.4276 0 0 0 0 9 0 215.804 -150.244 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -11.5862 -2.04295 0 0 2.04295 -11.5862 0 0 0 0 10 0 225.824 -135.933 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -9.19327 -1.62102 0 0 1.62102 -9.19327 0 0 0 0 9 0 238.606 -178.225 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -10.2147 -1.80113 0 0 1.80113 -10.2147 0 0 0 0 10 0 247.441 -165.608 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 6.35303 11.0038 0 0 -11.0038 6.35304 0 0 0 0 9 0 260.377 -131.708 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 7.05893 12.2264 0 0 -12.2264 7.05893 0 0 0 0 10 0 265.803 -151.958 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 6.35304 11.0038 0 0 -11.0038 6.35304 0 0 0 0 9 0 171.093 -122.41 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 7.05893 12.2264 0 0 -12.2264 7.05893 0 0 0 0 10 0 176.518 -142.66 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 4.94965 2.85768 0 0 -2.85768 4.94965 0 0 0 0 9 0 -167.508 -78.8588 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 5.4996 3.1752 0 0 -3.1752 5.4996 0 0 0 0 10 0 -169.949 -87.9673 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 0 5.71536 0 0 -5.71536 -3.8147e-06 0 0 0 0 9 0 -170.493 -60.1663 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 0 6.3504 0 0 -6.3504 0 0 0 0 0 10 0 -163.825 -66.8342 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -6.26579 2.28056 0 0 -2.28056 -6.26579 0 0 0 0 9 0 -222.626 -60.4741 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -6.96199 2.53395 0 0 -2.53395 -6.962 0 0 0 0 10 0 -212.655 -55.8246 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 2.81426 4.87445 1.56283 0 -4.94965 2.85768 0 0 -0.496231 -0.859497 8.86327 0 -114.935 -45.8205 17.0234 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 3.12696 5.41606 1.73648 0 -5.49961 3.1752 0 0 -0.551369 -0.954998 9.84808 0 -112.416 -54.7936 14.7077 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -7.51895 2.73667 0 0 -2.73668 -7.51896 0 0 0 0 9 0 -147.107 -91.364 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 7.51895 -2.73667 0 0 2.73668 7.51896 0 0 0 0 -9 0 -157.362 -96.1463 27.7 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -8.3544 3.04075 0 0 -3.04074 -8.3544 0 0 0 0 10 0 -149.578 -99.4527 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -7.3101 2.66065 0 0 -2.66065 -7.3101 0 0 0 0 9 0 -123.754 -97.7535 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -8.12233 2.95628 0 0 -2.95628 -8.12233 0 0 0 0 10 0 -112.122 -92.3291 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 4.29066 -3.60028 0 0 3.60029 4.29066 0 0 0 0 5.4 0 -5.82088 55.0124 17.8 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 4.7674 -4.00032 0 0 4.00032 4.7674 0 0 0 0 6 0 -15.027 54.207 17.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 5.93958 3.42922 0 0 -3.42922 5.93958 0 0 0 0 9 0 46.2302 99.8579 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 6.59953 3.81024 0 0 -3.81024 6.59953 0 0 0 0 10 0 43.3014 88.9276 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -6.12951 -5.14326 0 0 5.14327 -6.1295 0 0 0 0 9 0 102.955 155.082 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -6.81056 -5.71475 0 0 5.71474 -6.81056 0 0 0 0 10 0 104.105 168.234 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -7.54466 -1.33034 -1.56283 0 1.35086 -7.66106 0 0 -1.33032 -0.234573 8.86327 0 136.268 149.016 15.1133 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -8.38297 -1.47815 -1.73648 0 1.50095 -8.51228 0 0 -1.47815 -0.260635 9.84808 0 143.568 159.519 16.4442 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 0 4.8009 0 0 -4.8009 0 0 0 0 0 5.4 0 181.204 101.241 17.8 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 0 5.33434 0 0 -5.33434 0 0 0 0 0 6 0 186.805 95.6398 17.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -5.2215 1.90047 0 0 -1.90047 -5.2215 0 0 0 0 9 0 196.316 20.9849 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 5.2215 -1.90047 0 0 1.90047 5.2215 0 0 0 0 -9 0 189.194 17.6639 27.7 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -5.80167 2.11163 0 0 -2.11163 -5.80166 0 0 0 0 10 0 194.6 15.3677 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -2.20639 -12.5131 0 0 12.5131 -2.20638 0 0 0 0 9 0 140.683 36.2255 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -2.45154 -13.9034 0 0 13.9034 -2.45154 0 0 0 0 10 0 128.658 53.3982 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 0 7.87994 -1.56283 0 -8.0015 -7.62939e-06 0 0 0 1.38945 8.86327 0 77.9857 -102.736 15.1133 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -7.62939e-06 8.75549 -1.73648 0 -8.89056 -7.62939e-06 0 0 0 1.54383 9.84808 0 87.3208 -112.007 16.4442 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 0 5.44547 0 0 -5.44547 -3.8147e-06 0 0 0 0 5.4 0 163.734 -34.5317 17.8 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 0 6.05052 0 0 -6.05052 -3.8147e-06 0 0 0 0 6 0 170.087 -40.8847 17.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 11.0038 6.35305 0 0 -6.35306 11.0038 0 0 0 0 9 0 136.112 -70.5182 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 12.2264 7.05894 0 0 -7.05894 12.2264 0 0 0 0 10 0 130.686 -90.7679 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -10.5625 -1.86246 1.56283 0 1.89119 -10.7255 0 0 1.86246 0.3284 8.86327 0 219.488 -163.325 17.0234 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -11.7361 -2.0694 1.73648 0 2.10133 -11.9172 0 0 2.0694 0.364899 9.84808 0 229.501 -148.657 14.7077 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -2.62411 3.1273 0 0 -3.1273 -2.62412 0 0 0 0 9 0 -160.545 -29.347 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -2.91568 3.47478 0 0 -3.47478 -2.91569 0 0 0 0 10 0 -153.835 -29.934 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -5.62852 -0.992466 0 0 0.992462 -5.62853 0 0 0 0 9 0 -181.583 -34.8973 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -6.25392 -1.10274 0 0 1.10274 -6.25392 0 0 0 0 10 0 -176.174 -27.1728 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -3.06476 -2.57164 0 0 2.57164 -3.06475 0 0 0 0 5.4 0 -180.806 -50.9034 17.8 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -3.40527 -2.85737 0 0 2.85738 -3.40528 0 0 0 0 6 0 -180.23 -44.3276 17.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -5.28909 1.92507 -1.56283 0 -1.95477 -5.37068 0 0 -0.932602 0.339443 8.86327 0 -199.294 -58.059 15.1133 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -5.87677 2.13897 -1.73648 0 -2.17197 -5.96743 0 0 -1.03624 0.377159 9.84808 0 -190.791 -54.0579 16.4442 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 0 3.1752 0 0 -3.1752 0 0 0 0 0 6 0 -154.522 -62.7069 17.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -9.19327 -1.62103 0 0 1.62102 -9.19327 0 0 0 0 9 0 -180.624 -59.9884 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -10.2147 -1.80114 0 0 1.80113 -10.2147 0 0 0 0 10 0 -171.79 -47.3718 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -3.37712 5.84934 -1.56283 0 -5.93958 -3.42922 0 0 -0.595474 1.0314 8.86327 0 -95.0721 26.8428 15.1133 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -3.75236 6.49927 -1.73648 0 -6.59953 -3.81024 0 0 -0.661644 1.146 9.84808 0 -84.1696 23.962 16.4442 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -3.8147e-06 7.51896 3.07818 0 -8.0015 -3.8147e-06 0 0 0 -2.73668 8.45724 0 -35.9433 18.4146 18.1525 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -3.8147e-06 8.35439 3.4202 0 -8.89056 -3.8147e-06 0 0 1.90735e-06 -3.04075 9.39693 0 -26.6082 9.7945 14.0914 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 5.10793 -4.28606 0 0 4.28605 5.10793 0 0 0 0 9 0 -21.4728 54.0087 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 5.67547 -4.76228 0 0 4.76228 5.67547 0 0 0 0 10 0 -32.4325 53.0498 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -7.19904 2.62023 -1.56283 0 -2.66065 -7.3101 0 0 -1.26938 0.462017 8.86327 0 -24.8857 48.1548 15.1133 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -7.99893 2.91137 -1.73648 0 -2.95628 -8.12233 0 0 -1.41043 0.513351 9.84808 0 -13.3122 53.6006 16.4442 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 3.33396 5.68686 1.35345 0 -5.77459 3.28331 0.781416 0 0 -1.15787 8.86327 0 -56.1238 147.32 16.5048 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 3.7044 6.31874 1.50384 0 -6.41621 3.64812 0.868241 0 0 -1.28653 9.84808 0 -53.2764 136.919 13.5217 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -8.65116 3.21411 -1.35345 0 -3.12296 -8.7598 -0.781417 0 -1.5964 -0.281487 8.86327 0 76.0989 73.2886 15.632 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -9.6124 3.57124 -1.50384 0 -3.46995 -9.73312 -0.86824 0 -1.77377 -0.312767 9.84808 0 89.9241 79.7742 17.6302 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -4.12471 2.3814 0 0 -2.38139 -4.12471 0 0 0 0 9 0 168.302 107.888 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -4.58301 2.646 0 0 -2.646 -4.58301 0 0 0 0 10 0 175.893 109.922 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 4.22548 -3.54559 -0.9377 0 3.60028 4.29066 0 0 0.745071 -0.625183 5.31796 0 189.275 110.629 18.3099 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -4.22548 3.54559 0.9377 0 -3.60028 -4.29066 0 0 -0.745071 0.625183 -5.31796 0 198.069 110.561 24.2855 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 4.69498 -3.93954 -1.04189 0 4.00032 4.7674 0 0 0.82785 -0.694649 5.90885 0 192.799 115.39 18.0665 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 4.38605 7.59687 -3.07818 0 -8.08443 4.66754 0 0 1.59639 2.76504 8.45723 0 125.22 -6.45381 17.8105 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -4.38605 -7.59687 3.07818 0 8.08442 -4.66754 0 0 -1.59639 -2.76504 -8.45723 0 123.597 9.40515 25.7267 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 4.87339 8.44097 -3.4202 0 -8.9827 5.18616 0 0 1.77377 3.07226 9.39693 0 116.354 -2.10262 17.5116 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 1.117 -3.06896 0 0 3.06895 1.11701 0 0 0 0 6 0 -188.738 -80.3193 17.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -3.53108 1.31188 -0.902302 0 -1.27467 -3.57543 -0.520945 0 -0.651596 -0.114895 5.90885 0 -151.706 -50.3023 18.7781 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 6.72055 3.63884 -2.66578 0 -4.1214 6.72056 -1.53909 0 1.36833 2.37003 8.45724 0 -153.955 -78.2979 15.4118 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 7.46729 4.04316 -2.96198 0 -4.57933 7.46729 -1.7101 0 1.52037 2.63337 9.39693 0 -157.064 -90.5156 19.8477 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 8.65115 3.21412 1.35345 0 -3.12296 8.7598 -0.781417 0 -1.59639 0.281487 8.86327 0 -154.201 -119.146 15.7823 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -8.65115 -3.21412 -1.35345 0 3.12296 -8.7598 0.781416 0 1.59639 -0.281487 -8.86327 0 -150.748 -106.806 27.8766 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 9.6124 3.57124 1.50384 0 -3.46996 9.73311 -0.868241 0 -1.77377 0.312759 9.84808 0 -157.889 -110.093 14.3899 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 6.03638 -5.06512 1.56283 0 5.14326 6.12951 0 0 -1.06438 0.89312 8.86327 0 -130.311 115.728 17.0234 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 6.70709 -5.62792 1.73648 0 5.71474 6.81057 0 0 -1.18265 0.992355 9.84808 0 -143.295 114.437 14.7077 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 2.41655 -7.25034 2.66578 0 7.33413 2.89177 1.53909 0 -2.09641 1.75909 8.45723 0 -106.002 128.581 17.1309 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 2.68505 -8.05592 2.96198 0 8.14903 3.21307 1.7101 0 -2.32935 1.95456 9.39693 0 -117.262 133.569 11.7554 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 2.57164 -7.06551 -3.07818 0 7.51896 2.73668 0 0 0.936001 -2.57163 8.45723 0 49.2698 68.6637 14.3903 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 2.85738 -7.85056 -3.4202 0 8.35439 3.04076 0 0 1.04 -2.85737 9.39693 0 37.4454 73.8569 17.5116 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -10.5625 -1.86246 1.56283 0 1.89119 -10.7255 0 0 1.86246 0.3284 8.86327 0 137.964 -81.6916 17.0234 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -11.7361 -2.0694 1.73648 0 2.10133 -11.9172 0 0 2.0694 0.364891 9.84808 0 147.977 -67.0239 14.7077 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 7.66106 -1.35085 0 0 1.35085 7.66106 0 0 0 0 9 0 212.143 -90.1053 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 8.51228 -1.50095 0 0 1.50095 8.51228 0 0 0 0 10 0 201.629 -97.4672 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 8.92168 -1.65237 0.206199 0 1.6288 8.89359 0.781417 0 -0.347229 -0.737297 8.96364 0 232.674 -110.823 15.7535 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 9.91296 -1.83597 0.22911 0 1.80978 9.88176 0.868241 0 -0.385803 -0.819221 9.9596 0 220.385 -119.23 14.1033 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -5.74518 6.84682 -1.56283 0 -6.95245 -5.8338 0 0 -1.01303 1.20728 8.86327 0 229.951 -133.595 16.8498 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 5.74518 -6.84682 1.56283 0 6.95245 5.8338 0 0 1.01303 -1.20728 -8.86327 0 215.936 -131.012 26.8092 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -6.38353 7.60759 -1.73648 0 -7.72495 -6.48201 0 0 -1.1256 1.34142 9.84808 0 222.988 -140.2 16.4442 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -1.95477 -5.37068 0 0 5.37068 -1.95477 0 0 0 0 9 0 -166.73 -25.1171 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 1.95477 5.37068 0 0 -5.37068 1.95477 0 0 0 0 -9 0 -163.314 -32.4425 27.7 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -2.17197 -5.96742 0 0 5.96742 -2.17196 0 0 0 0 10 0 -160.952 -26.8821 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 4.50331 -3.77873 0 0 3.77872 4.50331 0 0 0 0 9 0 -101.234 -8.3177 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 5.00368 -4.19859 0 0 4.19859 5.00368 0 0 0 0 10 0 -110.897 -9.16305 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -5.11707 1.86246 0 0 -1.86246 -5.11707 0 0 0 0 5.4 0 -25.5357 136.567 17.8 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 5.11707 -1.86246 0 0 1.86246 5.11707 0 0 0 0 -5.4 0 -32.5152 133.313 24.82 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -5.68563 2.0694 0 0 -2.0694 -5.68563 0 0 0 0 6 0 -27.2173 131.062 17.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -3.87783 1.37376 0.12372 0 -1.37665 -3.86147 -0.468849 0 -0.0308037 -0.368233 5.37819 0 54.5683 91.0031 17.9835 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 3.87783 -1.37376 -0.12372 0 1.37665 3.86147 0.468849 0 0.0308037 0.368233 -5.37819 0 49.2738 88.0367 24.63 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -4.30871 1.52641 0.137466 0 -1.52961 -4.29052 -0.520945 0 -0.0342293 -0.409142 5.97576 0 53.3324 86.8712 17.1829 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -7.91034 -0.0526428 -1.35345 0 -0.0526352 -7.97112 0.781417 0 -1.2033 0.694725 8.86327 0 111.754 95.9171 14.8505 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -8.78926 -0.0584869 -1.50384 0 -0.0584869 -8.8568 0.868241 0 -1.337 0.771912 9.84808 0 121.111 105.24 15.0255 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -1.78426 -10.7217 -0.569282 0 10.714 -1.82759 0.573627 0 -0.798965 -0.56398 8.96364 0 212.227 45.1296 15.3835 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -1.98251 -11.913 -0.632536 0 11.9045 -2.03065 0.637363 0 -0.887741 -0.626644 9.9596 0 201.853 59.8017 14.8804 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -7.19904 -1.26939 3.07818 0 1.35086 -7.66106 0 0 2.62024 0.462021 8.45723 0 247.243 -125.238 18.1525 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -7.99893 -1.41043 3.4202 0 1.50095 -8.51228 0 0 2.91138 0.513351 9.39693 0 253.92 -114.845 14.0914 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -7.40833 3.2316 4.09387 0 -2.83458 -8.48093 1.53909 0 4.41039 -0.0224838 7.86584 0 242.198 -113.388 13.7506 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 7.40833 -3.2316 -4.09387 0 2.83458 8.48093 -1.53909 0 -4.41039 0.0224838 -7.86584 0 237.688 -118.666 29.6092 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -8.23148 3.59067 4.54874 0 -3.14954 -9.42326 1.7101 0 4.90044 -0.0249786 8.73982 0 239.372 -122.518 14.7108 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 0 6.53456 0 0 -6.53456 0 0 0 0 0 5.4 0 166.962 -165.313 17.8 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 0 7.26062 0 0 -7.26062 0 0 0 0 0 6 0 174.585 -172.936 17.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 2.23068 6.257 0.781416 0 -6.1794 2.2958 -1.35345 0 -1.14027 -0.201061 8.86327 0 -203.022 -50.1304 17.2226 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 2.47853 6.95222 0.86824 0 -6.866 2.55088 -1.50384 0 -1.26698 -0.223404 9.84808 0 -198.352 -60.0975 17.3976 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 4.8004 2.59917 2.66578 0 -2.94386 4.8004 1.53909 0 -0.977386 -1.69288 8.45724 0 -122.244 -66.5232 17.1309 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 5.33377 2.88797 2.96198 0 -3.27095 5.33377 1.7101 0 -1.08598 -1.88097 9.39693 0 -124.356 -75.062 11.7554 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -3.42812 1.24773 -1.04189 0 -1.26698 -3.481 0 0 -0.604462 0.220009 5.90885 0 -149.403 -35.5294 18.0665 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -0.821005 4.65614 0.9377 0 -4.72797 -0.83367 0 0 0.144765 -0.821003 5.31796 0 -14.4591 17.3787 18.4141 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -0.912227 5.17348 1.04189 0 -5.2533 -0.9263 0 0 0.160851 -0.912225 5.90885 0 -7.99337 12.9648 17.0246 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -1.00398 -6.43276 -0.461727 0 6.36943 -1.07945 0.812073 0 -1.05968 -0.393635 5.31858 0 -9.91121 33.69 17.1525 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -1.11553 -7.14751 -0.51303 0 7.07714 -1.19939 0.902302 0 -1.17742 -0.437374 5.90954 0 -16.112 42.4761 16.4483 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 8.64054 -0.715446 3.33601 0 -0.44194 8.85111 2.82835 0 -3.50566 -2.8792 7.86584 0 -95.4619 102.864 13.4849 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -8.64054 0.715446 -3.33601 0 0.44194 -8.85111 -2.82835 0 3.50566 2.8792 -7.86584 0 -91.8207 107.257 29.8749 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 9.60059 -0.794937 3.70668 0 -0.491051 9.83457 3.14261 0 -3.89518 -3.19911 8.73982 0 -96.2137 112.407 15.8481 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -1.13471 -6.43529 0 0 6.43529 -1.13471 0 0 0 0 5.4 0 -20.5039 126.052 17.8 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -1.26079 -7.15032 0 0 7.15032 -1.26079 0 0 0 0 6 0 -26.6879 134.884 17.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -2.29441 -6.43578 -0.781417 0 6.35596 -2.36139 1.35345 0 -1.17286 -0.20681 8.86327 0 43.2857 123.041 14.9141 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -2.54935 -7.15086 -0.868241 0 7.06217 -2.62376 1.50384 0 -1.30318 -0.229782 9.84808 0 38.6124 133.316 13.7543 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 9.12599 -1.79528 0.769546 0 1.66302 9.07786 1.35345 0 -1.04619 -1.2302 8.86431 0 213.403 69.9331 15.0063 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -9.12599 1.79528 -0.769545 0 -1.66302 -9.07786 -1.35345 0 1.04619 1.2302 -8.86431 0 222.832 75.6164 28.6529 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 10.14 -1.99476 0.855051 0 1.84781 10.0865 1.50384 0 -1.16243 -1.36689 9.84923 0 214.71 79.6834 15.8998 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 6.06017 7.09736 0.206199 0 -7.08446 6.02473 0.781417 0 0.478195 -0.68848 8.96364 0 187.464 17.3432 15.7535 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 6.73352 7.88596 0.22911 0 -7.87163 6.69415 0.868241 0 0.531326 -0.764979 9.9596 0 188.633 2.07231 14.1033 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -9.43183 5.44547 0 0 -5.44547 -9.43183 0 0 0 0 9 0 119.426 46.26 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -10.4798 6.05052 0 0 -6.05052 -10.4798 0 0 0 0 10 0 136.783 50.9108 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -7.34407 -2.56535 0.017807 0 2.44501 -7.01343 -2.67606 0 0.776657 -2.17885 8.59292 0 -217.876 -75.1742 17.5327 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 7.34407 2.56535 -0.017807 0 -2.44501 7.01343 2.67606 0 -0.776657 2.17885 -8.59292 0 -221.765 -87.5855 26.0452 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -8.16008 -2.85039 0.0197859 0 2.71667 -7.79269 -2.9734 0 0.862961 -2.42094 9.54769 0 -214.93 -82.3137 14.2296 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 1.12448 5.51775 1.53909 0 -5.39986 0.800591 2.66578 0 1.49744 -1.2565 8.45723 0 98.3089 110.215 15.879 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 1.24942 6.13084 1.7101 0 -5.99986 0.889542 2.96198 0 1.66383 -1.39611 9.39693 0 103.214 102.913 10.5035 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 7.15109 -6.00047 0 0 6.00047 7.15109 0 0 0 0 9 0 90.111 -101.717 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 7.94566 -6.6672 0 0 6.6672 7.94566 0 0 0 0 10 0 74.7675 -103.06 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 1.15788 -6.56662 0 0 6.56662 1.15788 0 0 0 0 9 0 89.0278 -60.4693 16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -1.15788 6.56662 0 0 -6.56662 -1.15788 0 0 0 0 -9 0 96.7523 -65.8781 27.7 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 1.28653 -7.29625 0 0 7.29625 1.28653 0 0 0 0 10 0 95.8949 -58.8823 15.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 3.83052 6.63467 1.56283 0 -6.73702 3.88962 0 0 -0.67543 -1.16987 8.86327 0 132.04 -41.5949 15.287 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -3.83052 -6.63467 -1.56283 0 6.73703 -3.88962 0 0 0.67543 1.16987 -8.86327 0 128.256 -32.5915 28.372 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 4.25613 7.37186 1.73648 0 -7.48558 4.3218 0 0 -0.750473 -1.29986 9.84808 0 124.754 -37.7928 14.7077 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 1.36835 -3.75948 0 0 3.75948 1.36834 0 0 0 0 5.4 0 193.276 -94.572 17.8 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -1.36835 3.75948 0 0 -3.75948 -1.36834 0 0 0 0 -5.4 0 198.404 -96.9631 24.82 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 1.52037 -4.1772 0 0 4.1772 1.52038 0 0 0 0 6 0 197.168 -92.9188 17.5 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 10.8489 0.213852 -0.769546 0 -0.0716553 10.7668 1.35345 0 0.952774 -1.62538 8.86431 0 231.361 -144.249 14.9208 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 12.0544 0.23761 -0.855051 0 -0.0796051 11.9632 1.50384 0 1.05864 -1.80597 9.84923 0 218.735 -156.97 13.7472 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -3.04222 -2.9062 2.33827 0 2.69232 -3.62984 -1.35 0 2.29831 0.405254 4.67654 0 -163.823 -35.0216 20.2657 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -3.38025 -3.22911 2.59808 0 2.99147 -4.03316 -1.5 0 2.55368 0.450285 5.19615 0 -163.542 -27.4188 18.8529 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -6.7902 3.47025 -5.19136 0 -2.57695 -8.66353 -2.25 0 -5.86484 -0.211117 6.99909 0 -63.2666 18.3748 14.953 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -7.54467 3.85583 -5.76818 0 -2.86328 -9.62614 -2.5 0 -6.51649 -0.234575 7.77677 0 -52.0124 24.4454 23.2457 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -2.38615 -5.9798 -0.923454 0 6.0472 -2.201 -0.9377 0 0.661987 -1.44848 5.23717 0 -123.846 84.1374 17.7859 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -2.65128 -6.64423 -1.02606 0 6.7191 -2.44555 -1.04189 0 0.735542 -1.60942 5.81908 0 -128.154 93.7621 19.6663 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -5.75134 -4.82594 -0.9377 0 4.90039 -5.84006 0 0 -1.01411 -0.850945 5.31796 0 -50.7433 97.6705 17.268 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -6.39037 -5.36216 -1.04189 0 5.44488 -6.48895 0 0 -1.1268 -0.945496 5.90885 0 -49.6942 110.161 18.0665 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -3.35991 -2.81931 -1.84691 0 3.00024 -3.57555 0 0 -1.22291 -1.02614 5.07434 0 -15.8016 144.365 18.8863 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 3.35991 2.81931 1.84691 0 -3.00024 3.57555 0 0 1.22291 1.02614 -5.07434 0 -17.751 136.636 23.636 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -3.73324 -3.13255 -2.05212 0 3.3336 -3.97282 0 0 -1.35879 -1.14015 5.63816 0 -12.38 140.804 18.707 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -7.97458 -9.51083 1.9262 0 9.69351 -8.20967 -0.202934 0 1.9715 1.89481 8.78912 0 178.809 -167.408 17.384 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -8.86064 -10.5676 2.14022 0 10.7706 -9.12186 -0.225482 0 2.19055 2.10535 9.76569 0 176.694 -146.839 14.8853 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 4.68108 -0.854149 2.14016 0 0.584534 4.73285 2.06013 0 -1.32097 -0.93251 8.49562 0 -188.008 -18.8492 16.53 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 5.20119 -0.949055 2.37796 0 0.649475 5.25873 2.28903 0 -1.46774 -1.03612 9.43958 0 -194.078 -23.3226 11.1577 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -6.62469 0.308044 0.934913 0 -0.137665 -6.48013 2.11272 0 0.745468 1.54082 8.69841 0 170.55 111.45 15.6658 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -7.36076 0.34227 1.03879 0 -0.152954 -7.20015 2.34746 0 0.828293 1.71202 9.6649 0 178.398 118.565 11.627 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 4.39525 -0.406784 2.12373 0 0.907791 4.57761 -1.26763 0 -1.7048 1.38879 4.8003 0 189.742 73.8207 20.0315 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 4.88361 -0.451988 2.3597 0 1.00867 5.08623 -1.40848 0 -1.89423 1.5431 5.33367 0 183.65 68.8776 18.766 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -6.9028 -1.47461 -3.78325 0 1.08577 -7.61779 1.32261 0 -3.41893 0.557998 8.0584 0 189.703 13.9269 13.4975 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -7.66978 -1.63845 -4.20361 0 1.20641 -8.46421 1.46957 0 -3.7988 0.619997 8.95377 0 196.679 24.5037 15.9206 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 8.11979 3.43997 5.28157 0 -2.46786 10.3272 -2.0024 0 -6.82577 0.358322 7.00681 0 -35.6766 120.253 21.2254 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 9.02199 3.82219 5.86841 0 -2.74207 11.4746 -2.22489 0 -7.58419 0.398132 7.78535 0 -41.8913 104.171 17.0105 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 6.68584 3.94638 0.569283 0 -3.91917 6.70156 -0.573627 0 -0.675423 0.17823 8.96364 0 83.4646 -61.4145 16.6529 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 7.42871 4.38487 0.632536 0 -4.35464 7.44617 -0.637363 0 -0.750473 0.198036 9.9596 0 80.2743 -73.847 16.16 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -7.7538 -6.81268 -2.87198 0 6.91908 -8.3573 0.781417 0 -3.25839 -1.53473 8.49359 0 173.889 -6.01663 14.1074 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -8.61534 -7.56964 -3.19109 0 7.68788 -9.28589 0.86824 0 -3.62044 -1.70525 9.43732 0 175.044 11.7669 16.0745 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -1.9194 -5.90009 1.69464 0 5.47466 -2.62196 -1.99941 0 3.00741 1.00739 4.72128 0 -126.032 -117.069 20.1747 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -2.13268 -6.55566 1.88293 0 6.08295 -2.91328 -2.22157 0 3.34156 1.11932 5.24587 0 -130.346 -107.183 20.268 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -3.12863 -2.67142 0.12372 0 2.6558 -3.12294 -0.468851 0 0.303497 -0.210793 5.37819 0 -82.2596 -6.72971 18.1209 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -3.47626 -2.96825 0.137466 0 2.95089 -3.46994 -0.520945 0 0.337212 -0.234215 5.97576 0 -81.7248 0.0420904 18.2248 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -2.34811 -3.83345 -1.74596 0 3.94586 -3.36388 0.766356 0 -2.71944 -1.57094 2.61953 0 189.784 -120.521 17.7401 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -2.60901 -4.25938 -1.93995 0 4.38429 -3.73765 0.851507 0 -3.02161 -1.74548 2.91059 0 188.071 -112.037 18.7374 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -4.15054 -3.18195 -1.93302 0 2.28219 -4.50423 2.3369 0 -2.98938 0.979233 4.46792 0 -104.001 71.3394 15.9163 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -4.61172 -3.5355 -2.1478 0 2.53577 -5.0047 2.59656 0 -3.32154 1.08804 4.96436 0 -101.655 80.2522 15.1969 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -1.48205 5.67629 0.576679 0 -2.83978 -1.07549 7.70632 0 4.92928 1.08705 4.61303 0 56.1703 120.056 14.6927 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	 
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -1.64672 6.30699 0.640755 0 -3.15531 -1.19498 8.56258 0 5.47698 1.20784 5.12559 0 60.9385 114.628 4.77296 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ -0.416132 3.30785 3.77926 0 -4.62148 -0.650375 0.080822 0 0.504684 -3.22818 3.85625 0 -26.759 153.953 16.6418 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
+
+TransformBegin 
+    Transform [ 0.416132 -3.30785 -3.77926 0 4.62148 0.650375 -0.080822 0 -0.504684 3.22818 -3.85625 0 -31.1405 152.414 25.515 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+TransformEnd
+
+TransformBegin 
+    Transform [ -0.462368 3.67538 4.19918 0 -5.13498 -0.722641 0.0898018 0 0.56076 -3.58687 4.28472 0 -31.6421 153.262 16.303 1 ]
+    Include "geometry/small_dot_vol.pbrt"
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+	
+TransformEnd
