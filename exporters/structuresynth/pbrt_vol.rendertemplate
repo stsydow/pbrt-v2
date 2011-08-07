@@ -1,0 +1,42 @@
+<template name="pbrt Template" defaultExtension="pbrt file (*.pbrt)" 
+runAfter="/Users/mmp/pbrt-git/book/src/build/darwin-release/pbrt &quot;$FILE&quot;">
+<description>
+Exporter to the pbrt rendering system (http://pbrt.org).
+
+Written by Matt Pharr (matt@pharr.org), heavily inspired by the RenderMan
+exporter by Tom Beddard.
+</description>
+<primitive name="begin">
+<![CDATA[
+# Exported from structuresynth by the pbrt exporter
+# http://pbrt.org
+]]>
+</primitive>
+
+<primitive name="end">
+<![CDATA[
+]]>
+</primitive>
+
+<primitive name="box">
+<![CDATA[
+TransformBegin 
+    Transform [ {matrix} ]
+    Include "geometry/small_dot_vol.pbrt"
+	"color sigma_a" [0 0 0]
+	"color sigma_s" [0.5 0.5 0.5]
+TransformEnd
+]]>
+</primitive>
+
+<primitive name="sphere">
+<![CDATA[
+Material "plastic" "rgb Kd" [{r} {g} {b}]
+TransformBegin 
+    Translate {cx} {cy} {cz}
+    Shape "sphere" "float radius" [{rad}]
+TransformEnd
+]]>
+</primitive>
+
+</template>
